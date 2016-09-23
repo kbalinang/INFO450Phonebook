@@ -15,7 +15,7 @@ void display(char mylist[10][2][50]);
 int main()
 {
 	char mylist[10][2][50];
-	bool answer = true; 
+	bool answer = true;
 	char response;
 	do
 	{
@@ -61,14 +61,14 @@ int main()
 
 	} while (answer);
 
-    return 0;
+	return 0;
 }
 
 
 void enter(char mylist[10][2][50])
 {
-	static int i=1;
-
+	static int i = 1;
+	int y;
 	if (i < 11)
 	{
 		cout << "Entry: " << i << endl;
@@ -76,6 +76,16 @@ void enter(char mylist[10][2][50])
 		cin.clear();
 		cin.ignore();
 		gets_s(mylist[i][0]);
+		if (y=1, y<10, y++)
+		{
+			if (((strcmp(mylist[i][0], mylist[i - y][0])) == 0))
+			{
+				cout << mylist[i][0] << " (ALERT) Already exists! " << endl;
+				cout << " " << endl;
+				cout << "Enter name: ";
+				gets_s(mylist[i][0]);
+			}
+		}
 		cout << "Enter number: ";
 		gets_s(mylist[i][1]);
 		cout << " " << endl;
@@ -96,7 +106,7 @@ void display(char mylist[10][2][50])
 
 	for (i = 1; i < 11; i++)
 	{
-		cout << "Entry: " << i  << " Name: " << mylist[i][0] << " Number: " << mylist[i][1] << endl;
+		cout << "Entry: " << i << " Name: " << mylist[i][0] << " Number: " << mylist[i][1] << endl;
 	}
 	system("pause");
 }
