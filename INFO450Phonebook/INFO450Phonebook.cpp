@@ -76,11 +76,11 @@ void enter(char mylist[10][2][50])
 		cin.clear();
 		cin.ignore();
 		gets_s(mylist[i][0]);
-		if (y=1, y<10, y++)
+		if (y = 1, y<10, y++)
 		{
 			if (((strcmp(mylist[i][0], mylist[i - y][0])) == 0))
 			{
-				cout << mylist[i][0] << " (ALERT) Already exists! " << endl;
+				cout << "(ALERT) " << mylist[i][0] << " Already exists! " << endl;
 				cout << " " << endl;
 				cout << "Enter name: ";
 				gets_s(mylist[i][0]);
